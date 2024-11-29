@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "caligner"
+version = "1.0"
+description = "C implementation of Needleman-Wunsch"
+
+[tool.setuptools]
+ext-modules = [
+    {name = "caligner", sources = ["caligner.c"], extra-compile-args = ["-O3"]}
+]
